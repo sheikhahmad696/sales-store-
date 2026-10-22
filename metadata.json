@@ -1,0 +1,6 @@
+{
+  "name": "DN STORE - Modern Streetwear & Combos",
+  "description": "Modern online storefront for DN Store featuring Cold Collection, signature combo deals, Shop The Look reels, and Cash on Delivery across Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

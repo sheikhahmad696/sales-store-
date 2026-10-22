@@ -1,10 +1,14 @@
 import { Product, LookReel } from '../types/store';
+import heroImg from '../assets/images/hero_cold_collection_1792648854211.jpg';
+import comboImg from '../assets/images/combo_denim_watch_1792648854688.jpg';
+import perfumeImg from '../assets/images/perception_perfume_1792648855411.jpg';
+import bootsImg from '../assets/images/leather_chelsea_boots_1792648855661.jpg';
 
-// Image paths generated and local fallbacks
-export const HERO_IMAGE = '/src/assets/images/hero_cold_collection_1792648854211.jpg';
-export const COMBO_DENIM_WATCH_IMAGE = '/src/assets/images/combo_denim_watch_1792648854688.jpg';
-export const PERCEPTION_PERFUME_IMAGE = '/src/assets/images/perception_perfume_1792648855411.jpg';
-export const CHELSEA_BOOTS_IMAGE = '/src/assets/images/leather_chelsea_boots_1792648855661.jpg';
+// Bundled Vite assets with public folder fallbacks
+export const HERO_IMAGE: string = heroImg || '/images/hero_cold_collection.jpg';
+export const COMBO_DENIM_WATCH_IMAGE: string = comboImg || '/images/combo_denim_watch.jpg';
+export const PERCEPTION_PERFUME_IMAGE: string = perfumeImg || '/images/perception_perfume.jpg';
+export const CHELSEA_BOOTS_IMAGE: string = bootsImg || '/images/leather_chelsea_boots.jpg';
 
 export const PRODUCTS: Product[] = [
   // --- COMBO OFFERS ---

@@ -226,6 +226,10 @@ export const ShopView: React.FC<ShopViewProps> = ({
                     src={product.image}
                     alt={product.name}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                    }}
                     className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-500"
                     loading="lazy"
                   />

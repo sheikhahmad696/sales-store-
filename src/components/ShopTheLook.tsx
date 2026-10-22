@@ -87,6 +87,10 @@ export const ShopTheLook: React.FC<ShopTheLookProps> = ({
                     src={reel.image}
                     alt={reel.title}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                    }}
                     className={`w-full h-full object-cover transition-transform duration-700 ${
                       playing ? 'group-hover:scale-106' : 'grayscale-30'
                     }`}
@@ -188,6 +192,10 @@ export const ShopTheLook: React.FC<ShopTheLookProps> = ({
                   src={reels[activeReelIndex].image}
                   alt={reels[activeReelIndex].title}
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                  }}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-black/40"></div>

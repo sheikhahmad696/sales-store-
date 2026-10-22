@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Order } from '../types/store';
 import { formatPKR } from '../utils/format';
+import { COMBO_DENIM_WATCH_IMAGE, PERCEPTION_PERFUME_IMAGE } from '../data/products';
 import { Search, Truck, CheckCircle2, Clock, PackageCheck, AlertCircle, MapPin, Copy, Check, MessageSquare, RefreshCw } from 'lucide-react';
 
 interface OrderTrackingViewProps {
@@ -29,7 +30,7 @@ export const OrderTrackingView: React.FC<OrderTrackingViewProps> = ({ orders, on
             category: 'combos',
             price: 2999,
             originalPrice: 7000,
-            image: '/src/assets/images/combo_denim_watch_1792648854688.jpg',
+            image: COMBO_DENIM_WATCH_IMAGE,
             rating: 4.9,
             reviewsCount: 184,
             description: '14oz washed relaxed denim with classic rectangular dress watch.',
@@ -65,7 +66,7 @@ export const OrderTrackingView: React.FC<OrderTrackingViewProps> = ({ orders, on
             category: 'fragrances',
             price: 2450,
             originalPrice: 4500,
-            image: '/src/assets/images/perception_perfume_1792648855411.jpg',
+            image: PERCEPTION_PERFUME_IMAGE,
             rating: 5.0,
             reviewsCount: 312,
             description: 'Signature magnetic perfume.',

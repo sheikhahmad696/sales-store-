@@ -102,6 +102,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   src={HERO_IMAGE}
                   alt="DN Store The Cold Collection Model"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                  }}
                   className="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
@@ -159,6 +163,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 src={cat.image}
                 alt={cat.label}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                }}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-106 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
@@ -222,6 +230,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                       src={combo.image}
                       alt={combo.name}
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = '/images/combo_denim_watch.jpg';
+                      }}
                       className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-neutral-950 text-white text-[11px] font-bold px-2 py-0.5 rounded">

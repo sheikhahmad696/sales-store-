@@ -73,6 +73,10 @@ export const ComboOffers: React.FC<ComboOffersProps> = ({
                     src={combo.image}
                     alt={combo.name}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/images/combo_denim_watch.jpg';
+                    }}
                     className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-500"
                     loading="lazy"
                   />

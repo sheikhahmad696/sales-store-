@@ -72,6 +72,10 @@ export const ColdCollectionView: React.FC<ColdCollectionViewProps> = ({
               src={HERO_IMAGE}
               alt="Cold Collection Streetwear"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = '/images/hero_cold_collection.jpg';
+              }}
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-neutral-900 via-transparent to-transparent"></div>
@@ -123,6 +127,10 @@ export const ColdCollectionView: React.FC<ColdCollectionViewProps> = ({
                     src={item.image}
                     alt={item.name}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                    }}
                     className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-500"
                     loading="lazy"
                   />

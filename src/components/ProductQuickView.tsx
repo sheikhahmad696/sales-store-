@@ -65,6 +65,10 @@ export const ProductQuickView: React.FC<ProductQuickViewProps> = ({
               src={product.image}
               alt={product.name}
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = '/images/hero_cold_collection.jpg';
+              }}
               className="w-full h-full object-cover rounded-xl"
             />
             {discount > 0 && (

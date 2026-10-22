@@ -105,6 +105,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   src={product.image}
                   alt={product.name}
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                  }}
                   className="w-14 h-14 object-cover rounded-lg bg-neutral-100 shrink-0"
                 />
                 <div className="flex-1 min-w-0">

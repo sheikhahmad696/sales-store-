@@ -75,6 +75,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreCold, onExploreCombos }) =>
                 src={HERO_IMAGE}
                 alt="DN Store The Cold Collection Model"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = '/images/hero_cold_collection.jpg';
+                }}
                 className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
